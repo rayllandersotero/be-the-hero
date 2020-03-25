@@ -1,0 +1,48 @@
+.new-incitent-container {
+	width: 100%;
+	max-width: 1024px;
+	min-height: 100vh;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.new-incitent-container .content {
+	width: 100%;
+	padding: 6rem;
+	background: #f0f0f5;
+	box-shadow: 0 0 6rem rgba(0, 0, 0, 0.1);
+	border-radius: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.new-incitent-container .content section {
+	width: 100%;
+	max-width: 300px;
+}
+
+.new-incitent-container .content section h1 {
+	margin: 4rem 0 2rem;
+	font-size: 2rem;
+}
+
+.new-incitent-container .content section p {
+	font-size: 1.1rem;
+	color: #737380;
+	line-height: 2rem;
+}
+
+.new-incitent-container .content form {
+	width: 100%;
+	max-width: 450px;
+}
+
+.new-incitent-container .content form input,
+.new-incitent-container .content form textarea {
+	margin-top: 0.5rem;
+}
