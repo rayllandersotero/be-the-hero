@@ -11,29 +11,29 @@ export default function Profile() {
 
 	const history = useHistory();
 
-	const ongId = localStorage.getItem('ongId');
-	const ongName = localStorage.getItem('ongName');
+	const ngoId = localStorage.getItem('ngoId');
+	const ngoName = localStorage.getItem('ngoName');
 
 	useEffect(
 		() => {
 			api
 				.get('profile', {
 					headers: {
-						Authorization: ongId
+						Authorization: ngoId
 					}
 				})
 				.then((response) => {
 					setIncidents(response.data);
 				});
 		},
-		[ ongId ]
+		[ ngoId ]
 	);
 
 	async function handleDeleteIncident(id) {
 		try {
 			await api.delete(`incidents/${id}`, {
 				headers: {
-					Authorization: ongId
+					Authorization: ngoId
 				}
 			});
 
@@ -54,7 +54,7 @@ export default function Profile() {
 		<div className="profile-container">
 			<header>
 				<img src={logo} alt="Be The Hero" />
-				<span>Welcome, {ongName}</span>
+				<span>Welcome, {ngoName}</span>
 
 				<Link className="button" to="/incidents/new">
 					Register new case
